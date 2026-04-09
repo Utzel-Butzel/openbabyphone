@@ -13,32 +13,6 @@ https://openbabyphone.wirewire.de/
 - Streaming: WebRTC with configurable STUN and TURN servers
 - Deployment: Single Dockerized Node service that also serves the built frontend
 
-## Project layout
-
-```text
-.
-├── backend
-│   ├── src
-│   │   └── server.ts
-│   ├── package.json
-│   └── tsconfig.json
-├── frontend
-│   ├── src
-│   │   ├── components
-│   │   ├── lib
-│   │   ├── pages
-│   │   ├── App.tsx
-│   │   ├── index.css
-│   │   └── main.tsx
-│   ├── index.html
-│   ├── package.json
-│   ├── tsconfig.json
-│   └── vite.config.ts
-├── Dockerfile
-├── package.json
-└── README.md
-```
-
 ## Local development
 
 1. Install dependencies:
