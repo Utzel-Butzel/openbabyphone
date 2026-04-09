@@ -2,6 +2,10 @@
 
 OpenBabyPhone is a browser-based baby monitor built with a Vite + React frontend and a Node.js signaling backend, both written in TypeScript. The baby device publishes live camera video and microphone audio, runs lightweight crib motion detection on the camera feed, and the parent device receives both the stream and live movement alerts over WebRTC and Socket.IO. The parent can also switch the session into audio-only mode to reduce bandwidth use and pause the baby device camera for lower battery drain.
 
+## Live demo
+
+https://openbabyphone.wirewire.de/
+
 ## Stack
 
 - Frontend: React, Vite, TypeScript, Tailwind CSS, React Router, Socket.IO client
