@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+:root {
+  color: #f7efe1;
+  background-color: #07111a;
+  font-family: "Space Grotesk", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 196, 109, 0.2),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(111, 220, 196, 0.15),
+      transparent 22%
+    ),
+    linear-gradient(160deg, #08121b 0%, #102032 45%, #1b2b3c 100%);
+  color: #f7efe1;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent 90%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+video {
+  background: rgba(3, 9, 14, 0.7);
+}
+
+@layer components {
+  .glass-panel {
+    @apply rounded-[28px] border border-white/12 bg-white/6 shadow-[0_18px_80px_rgba(0,0,0,0.25)] backdrop-blur-xl;
+  }
+
+  .warm-button {
+    @apply inline-flex items-center justify-center rounded-full bg-[#ffc76d] px-5 py-3 text-sm font-semibold text-slate-950 transition duration-200 hover:bg-[#ffd48d] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc76d];
+  }
+
+  .ghost-button {
+    @apply inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition duration-200 hover:border-white/35 hover:bg-white/10;
+  }
+
+  .status-dot {
+    @apply inline-block h-2.5 w-2.5 rounded-full;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.32em] text-[#7fe9d0];
+  }
+}
